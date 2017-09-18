@@ -1,0 +1,10 @@
+from string import maketrans
+def to_rna(dnatest):
+	DNA="GCTA"
+	RNA="CGAU"
+	transcribe=maketrans(DNA,RNA)
+	dna=['G','C','T','A']
+	for i in dnatest:
+	if i not in dna:
+		return ('')
+	return (dnatest.translate(transcribe))
